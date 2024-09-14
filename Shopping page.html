@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy any product</title>
+    <link rel="stylesheet" href="CSS/navber.css" />
+    <link rel="stylesheet" href="CSS/Header and banner.css" />
+    <link rel="stylesheet" href="CSS/item show.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="CSS/random.css" />
+    <link rel="stylesheet" href="CSS/contactindex.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="icon" type="image/x-icon" href="Buying procces/item-images/bazaar have(logo).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="item-images/bazaar have(logo).png"
+    />
+    <link rel="stylesheet" href="CSS/loading.css" />
+    <link rel="stylesheet" href="CSS/Shpping.css" />
+    <!-- This css is only for footer -->
+    <style>
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-top: 1px solid #ddd;
+      }
+
+      .footer-logo,
+      .footer-links,
+      .footer-social,
+      .footer-address {
+        flex: 1;
+        padding: 0 20px;
+      }
+
+      .logo-img {
+        max-width: 100px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-text {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .links-title,
+      .social-title,
+      .address-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .links-list,
+      .social-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .links-list li,
+      .social-list li {
+        margin-bottom: 5px;
+      }
+
+      .footer-link,
+      .social-link {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+      }
+
+      .footer-link:hover,
+      .social-link:hover {
+        color: #f00;
+      }
+
+      .address-text {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .footer-bottom {
+        background-color: #8b003a;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .footer-bottom-text {
+        color: #fff;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    
+ <header class="header">
+  <img src="Buying procces/item-images/bazaar have(logo).png" alt="Bazaar Have Logo" class="logo">
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Shopping page.html">Shop</a></li>
+      <li><a href="about us.html">About</a></li>
+      <li><a href="conact.html">Contact</a></li>
+    </ul>
+    <button class="menu-toggle">
+      <!-- SVG Icon for the Menu Button -->
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+        <path d="M120 936v-60h720v60H120Zm0-240v-60h720v60H120Zm0-240v-60h720v60H120Z"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('show');
+});
+</script>
+
+
+
+
+
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="Buying procces/item-images/bed sheet.jpg" alt="Bad Sheet" />
+        <div class="product-title">Bad Sheet</div>
+        <div class="product-price">Rs.1,410</div>
+        <a href="Buying procces/Bed Sheet.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/hair Chain.jpg"
+          alt="1 PC Ahead Hair Chain"
+        />
+        <div class="product-title">1 PC Ahead Hair Chain</div>
+        <div class="product-price">Rs.560</div>
+        <a href="Buying procces/1 PC Ahead Hair Chain.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/Jewelery Box.jpg"
+          alt="1 PC Jewellery Box"
+        />
+        <div class="product-title">Jewellery Box</div>
+        <div class="product-price">Rs.910</div>
+        <a href="Buying procces/Jewellery Box.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/Chopper.jpg"
+          alt="Food Hand Chopper"
+        />
+        <div class="product-title">Food Hand Chopper</div>
+        <div class="product-price">Rs.1,260</div>
+        <a href="Buying procces/Food Hand Chopper.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/Karatin Hair Mask+Hair food oil.jpg"
+          alt="2 in 1 Hair Oil and Hair Mask"
+        />
+        <div class="product-title">2 in 1 Hair Oil and Hair Mask</div>
+        <div class="product-price">Rs.1,060</div>
+        <a href="Buying procces/2 in 1 Hair Oil and Hair Mask.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img src="Buying procces/item-images/Flawless Tracksuit Set 1.jpeg" alt="Track Suit" />
+        <div class="product-title">Track Suit (Flawless)</div>
+        <div class="product-price">Rs.1,150</div>
+        <a href="Buying procces/Track Suit (Flawless).html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img src="Buying procces/item-images/Emoji Hijab Brooch.jpg" alt="Emoji Hijab Brooch" />
+        <div class="product-title">Emoji Hijab Brooch</div>
+        <div class="product-price">Rs.510</div>
+        <a href="Buying procces/Emoji Hijab Brooch.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/3 PCS Calligraphy Set.jpg"
+          alt="3 PCS Calligraphy Set"
+        />
+        <div class="product-title">3 PCS Calligraphy Set</div>
+        <div class="product-price">Rs.1,254</div>
+        <a href="Buying procces/3 PCS Calligraphy Set.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="Buying procces/item-images/Decoration pieace 99 name off Allah.jpg"
+          alt="Decoration 99 Name of Allah"
+        />
+        <div class="product-title">Decoration 99 Name of Allah</div>
+        <div class="product-price">Rs.804</div>
+        <a href="Buying procces/Decoration 99 Name of Allah.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <img src="Buying procces/item-images/Decoration clock.jpg" alt="Stylish Clock" />
+        <div class="product-title">Stylish Wooden Clock</div>
+        <div class="product-price">Rs.814</div>
+        <a href="Buying procces/Stylish Wooden Clock.html" class="btn-link">
+          <button class="btn">
+            Order and Check Deatials
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <center>
+        <button class="btn" onclick="switchToUrdu()">
+          اردو میں تبدیل کریں۔
+        </button>
+        <button class="btn" onclick="switchToEnglish()">
+          Change to English
+        </button>
+      </center>
+    </div>
+    <h1 id="container-23">
+      We offer a wide range of designs. <br />If you can't find what you're
+      looking for,<br />
+      just click the link below to <span>send us a message</span> to get your
+      product.
+      <a href="#" class="btn">Describe what you want!</a>
+      And if you want to know more about us click this button
+      <a href="#" class="btn">About Us</a>
+    </h1>
+
+    <!-- Language switch buttons -->
+
+    <script>
+      function switchToUrdu() {
+        document.getElementById("container-23").innerHTML = `
+           <h1 id="container-23">
+             ہم مختلف قسم کے ڈیزائنز پیش کرتے ہیں۔ <br> اگر آپ کو اپنی مطلوبہ چیز نہیں مل رہی ہے،<br> تو بس نیچے دیے گئے بٹن پر کلک کریں اور ہمیں پیغام بھیجیں۔
+             <a href="#" class="btn">اپنی خواہشات بیان کریں!</a>
+             اور اگر آپ ہمارے بارے میں مزید جاننا چاہتے ہیں تو اس بٹن پر کلک کریں۔
+             <a href="#" class="btn">ہمارے بارے میں</a>
+           </h1>`;
+      }
+
+      function switchToEnglish() {
+        document.getElementById("container-23").innerHTML = `
+           <h1 id="container-23">
+             We offer a wide range of designs. <br>If you can't find what you're looking for,<br> just click the link below to
+             <span>send us a message</span> to get your product.
+             <a href="#" class="btn">Describe what you want!</a>
+             And if you want to know more about us click this button
+             <a href="#" class="btn">About Us</a>
+           </h1>`;
+      }
+    </script>
+
+
+
+
+<style>
+.footer-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+<div class="footer-clean">
+<div class="footer-container">
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3>About Us</h3>
+          <p>We are seling items at heigh quality and at low budget</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shopping page.html">Shop</a></li>
+            <li><a href="conact.html">Contact</a></li>
+            <li><a href="about us.html">About US</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: mfozanp@gmail.com</p>
+      </div>
+  </div>
+</div>
+
+  </body>
+</html>

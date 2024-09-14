@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/contactindex.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="aaeb2d12-8479-4b57-bc84-485630d1b78c">
+
+            <h1>Contact Us</h1>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="number" name="number" class="contact-inputs" placeholder="Your Phone Number" required>
+            <input type="email" name="email" id="email" class="contact-inputs" placeholder="Your Email" required>
+            <span id="emailError" class="error-message"></span>
+            <textarea name="message" id="message" rows="4" placeholder="How can we help you?" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+
+            // Clear previous error message
+            emailError.textContent = '';
+
+            // Validate email
+            if (!emailInput.value.endsWith('@gmail.com')) {
+                emailError.textContent = 'Your Email must be a Gmail address.';
+            } else {
+                // Submit the form or perform desired action
+                this.submit();
+            }
+        });
+    </script>
+</body>
+</html>
