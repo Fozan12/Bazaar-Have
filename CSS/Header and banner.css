@@ -139,6 +139,28 @@ body, html {
         color: white;
         text-align: center;
         padding: 20px;
-        font-size: 20px;}    
+        font-size: 20px;}  
+
+
+/* Animated Text Color Styles */
+.animated-text {
+    /* font-size: 2em; */
+    font-weight: bold;
+    color: #ff0077; /* Initial color */
+    animation: colorChange 5s infinite; /* Duration and infinite looping */
+}
+
+/* Keyframes for color change animation */
+@keyframes colorChange {
+    0% {
+        color: #ce5b91; /* Initial color */
+    }
+    50% {
+        color: #ffdd57; /* Color at midpoint */
+    }
+    100% {
+        color:  linear-gradient(90deg, rgba(255,141,0,1) 0%, rgba(0,255,231,1) 56%, rgba(160,170,22,1) 100%, rgba(2,161,222,1) 100%); /* End color */
+    }
+}  
 
 }
