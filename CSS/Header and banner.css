@@ -143,6 +143,7 @@ body, html {
 
 
 /* Animated Text Color Styles */
+/* Animated Text Color Styles */
 .animated-text {
     /* font-size: 2em; */
     font-weight: bold;
@@ -161,6 +162,4 @@ body, html {
     100% {
         color:  linear-gradient(90deg, rgba(255,141,0,1) 0%, rgba(0,255,231,1) 56%, rgba(160,170,22,1) 100%, rgba(2,161,222,1) 100%); /* End color */
     }
-}  
-
 }
