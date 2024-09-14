@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buying form.css">
+    <title>Order Bed Sheet</title>
+    <style>
+        /* Modal/Popup styles with linear gradient */
+        #popupMessage {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background: linear-gradient(135deg, #4CAF50, #3B82F6); /* Green to Blue gradient */
+            color: white;
+            font-size: 24px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+            width: 80%;
+            height: 200px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h2>آرڈر کرنے کا طریقہ دیکھنے کے لیے نیچے دی گئی ویڈیو پر کلک کریں۔</h2>
+    
+    <div class="video-container">
+        <video controls>
+            <source src="Tutorial Video.mp4" type="video/mp4">
+            آپ کا براؤزر ویڈیو ٹیگ کو سپورٹ نہیں کرتا۔
+        </video>
+    </div>
+    
+    <div class="contact-container">
+        <form id="orderForm">
+            <input type="hidden" name="access_key" value="aaeb2d12-8479-4b57-bc84-485630d1b78c">
+            
+            <h1>Order Details</h1>
+            <h1>Please Write Everything Correctly</h1><hr>
+            <label for="number">Phone Number</label>
+            <input type="number" name="number" id="number" class="contact-inputs" placeholder="Your Phone Number" required>
+            
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" class="contact-inputs" placeholder="Your Location" required>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="contact-inputs" placeholder="Your Email" required>
+            <span id="emailError" class="error-message"></span>
+
+            <label for="item">Item</label>
+            <input type="text" name="item" id="item" class="contact-inputs" value="Bed Sheet" readonly>
+            <label for="item">Price</label>
+            <input type="text" name="Price" id="Price" class="contact-inputs" value="1410" readonly>
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" class="contact-inputs" placeholder="Quantity" required>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button type="submit">Place Order</button><br><br>
+            <div><h2>.آپ کا آرڈر پلیس کرنے کے بعد انتظار کریں اور آپ کو یہ آپ کے ای میل یا فون نمبر پر اطلاع دے دی جائے گی</h2></div>
+            <div><h4>After placing your order wait and you will be notified on your email or phone number</h4></div>
+        </div>
+        
+        </form>
+        <!-- Pop-up Modal -->
+        <div id="popupMessage">
+            Your order has been placed successfully!
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const popupMessage = document.getElementById('popupMessage');
+
+            // Clear previous error message
+            emailError.textContent = '';
+
+            // Validate email
+            if (!emailInput.value.endsWith('@gmail.com')) {
+                emailError.textContent = 'Your Email must be a Gmail address.';
+                return;
+            }
+            
+            // Submit the form using AJAX
+            const formData = new FormData(this);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show pop-up message
+                    popupMessage.style.display = 'block';
+                    setTimeout(() => {
+                        popupMessage.style.display = 'none';
+                    }, 10000); // Hide after 10 seconds
+
+                    this.reset(); // Reset form after successful submission
+                } else {
+                    emailError.textContent = 'There was an error submitting your form. Please try again.';
+                }
+            })
+            .catch(error => {
+                emailError.textContent = 'An unexpected error occurred. Please try again later.';
+            });
+        });
+    </script>
+</body>
+</html>
