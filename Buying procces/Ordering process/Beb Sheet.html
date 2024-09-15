@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="buying form.css" />
+    <title>Order</title>
+  </head>
+  <body>
+    <h2>آرڈر کرنے کا طریقہ دیکھنے کے لیے نیچے دی گئی ویڈیو پر کلک کریں۔</h2>
+
+    <div class="video-container">
+      <video controls>
+        <source src="Tutorial Video.mp4" type="video/mp4" />
+        آپ کا براؤزر ویڈیو ٹیگ کو سپورٹ نہیں کرتا۔
+      </video>
+    </div>
+
+    <div class="contact-container">
+      <form
+        id="orderForm"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="aaeb2d12-8479-4b57-bc84-485630d1b78c"
+        />
+
+        <h1>Order Details</h1>
+        <h1>Please Write Everything Correctly</h1>
+        <hr />
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="contact-inputs"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="number">Phone Number</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          class="contact-inputs"
+          placeholder="Your Phone Number"
+          required
+        />
+
+        <label for="location">Location</label>
+        <input
+          type="text"
+          name="location"
+          id="location"
+          class="contact-inputs"
+          placeholder="Your Location"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="contact-inputs"
+          placeholder="Your Email"
+          required
+        />
+        <span id="emailError" class="error-message"></span>
+
+        <label for="quantity">Quantity</label>
+        <input
+          type="number"
+          name="quantity"
+          id="quantity"
+          class="contact-inputs"
+          placeholder="Quantity"
+          required
+        />
+
+        <label for="item">Item</label>
+        <input
+          type="text"
+          name="item"
+          id="item"
+          class="contact-inputs"
+          value="Beb Sheet"
+          readonly
+        />
+
+        <label for="item">Price</label>
+        <input
+          type="text"
+          name="Price"
+          id="Price"
+          class="contact-inputs"
+          value="1410"
+          readonly
+        />
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none;"
+        />
+
+        <button type="submit">Place Order</button><br /><br />
+
+        <div>
+          <h2>
+            .آپ کا آرڈر پلیس کرنے کے بعد انتظار کریں اور آپ کو یہ آپ کے ای میل
+            یا فون نمبر پر اطلاع دے دی جائے گی
+          </h2>
+        </div>
+        <div>
+          <h2>
+            After placing your order wait and you will be notified on your email
+            or phone number
+          </h2>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const emailInput = document.getElementById("email");
+          const emailError = document.getElementById("emailError");
+
+          // Clear previous error message
+          emailError.textContent = "";
+
+          // Validate email
+          if (!emailInput.value.endsWith("@gmail.com")) {
+            emailError.textContent = "Your Email must be a Gmail address.";
+            return;
+          }
+
+          // Collect form data
+          const formData = new FormData(this);
+
+          // Submit the form using fetch
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                // Redirect to alert.html on success
+                window.location.href = "alert.html";
+              } else {
+                alert(
+                  "There was an error with your submission. Please try again."
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert(
+                "There was an error with your submission. Please try again."
+              );
+            });
+        });
+    </script>
+  </body>
+</html>

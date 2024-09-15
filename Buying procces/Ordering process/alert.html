@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order Rules</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        }
+
+        .message-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <div class="btn-container">
+            <button class="btn" onclick="setLanguage('english')">English</button>
+            <button class="btn" onclick="setLanguage('urdu')">اردو</button>
+        </div><br>
+        <!-- Message in Urdu initially -->
+        <h2 id="message">آپ کو اپنے فون نمبر اور ای میل پر ایک اطلاع موصول ہوگی۔</h2>
+
+        <!-- Language toggle buttons -->
+
+        <!-- Bottom button with alert -->
+        <button class="btn" onclick="alert('Thank you for your order!')">OK</button>
+    </div>
+
+    <script>
+        // JavaScript function to change the language
+        function setLanguage(language) {
+            const messageElement = document.getElementById('message');
+            
+            if (language === 'english') {
+                messageElement.textContent = 'You will receive a notification on your phone number and at your email.';
+            } else if (language === 'urdu') {
+                messageElement.textContent = 'آپ کو اپنے فون نمبر اور ای میل پر ایک اطلاع موصول ہوگی۔';
+            }
+        }
+    </script>
+</body>
+</html>
